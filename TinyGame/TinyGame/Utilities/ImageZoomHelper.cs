@@ -31,18 +31,20 @@ namespace TinyGame.Utilities
 
 		public static void OnPinchDelta(object sender, PinchGestureEventArgs e)
 		{
-			if (_initialScale * e.DistanceRatio > 4 || (_initialScale != 1 && e.DistanceRatio == 1) || _initialScale * e.DistanceRatio < 1)
+			if (_initialScale * e.DistanceRatio > 4 || (_initialScale != 1 && e.DistanceRatio == 1) 
+                //|| _initialScale * e.DistanceRatio < 1
+                )
 			{
 				return;
 			}
 			// if its original size then center it back
-			if (e.DistanceRatio <= 1.08)
-			{
-				((CompositeTransform)((Image)sender).RenderTransform).CenterY = 0;
-				((CompositeTransform)((Image)sender).RenderTransform).CenterY = 0;
-				((CompositeTransform)((Image)sender).RenderTransform).TranslateX = 0;
-				((CompositeTransform)((Image)sender).RenderTransform).TranslateY = 0;
-			}
+            //if (e.DistanceRatio <= 1.08)
+            //{
+            //    ((CompositeTransform)((Image)sender).RenderTransform).CenterY = 0;
+            //    ((CompositeTransform)((Image)sender).RenderTransform).CenterY = 0;
+            //    ((CompositeTransform)((Image)sender).RenderTransform).TranslateX = 0;
+            //    ((CompositeTransform)((Image)sender).RenderTransform).TranslateY = 0;
+            //}
 			((CompositeTransform)((Image)sender).RenderTransform).CenterX = _center.X;
 			((CompositeTransform)((Image)sender).RenderTransform).CenterY = _center.Y;
 
