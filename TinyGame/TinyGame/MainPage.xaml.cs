@@ -19,6 +19,7 @@ namespace TinyGame
         public MainPage()
         {
             InitializeComponent();
+            rctMain.Height = rctMain.Width;
         }
     }
 }
