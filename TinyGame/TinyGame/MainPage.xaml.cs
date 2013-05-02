@@ -49,7 +49,9 @@ namespace TinyGame
 
         private void OnPinchCompleted(object sender, PinchGestureEventArgs e)
         {
-            MessageBox.Show(String.Format("Height={0}, \nWidth={1}", ((CompositeTransform)((Image)sender).RenderTransform).ScaleX * ((Image)sender).ActualWidth, ((CompositeTransform)((Image)sender).RenderTransform).ScaleY * ((Image)sender).ActualHeight));
+            MessageBox.Show(String.Format("Height={0}, \nWidth={1}", Math.Round(((CompositeTransform)((Image)sender).RenderTransform).ScaleX * ((Image)sender).ActualWidth), Math.Round(((CompositeTransform)((Image)sender).RenderTransform).ScaleY * ((Image)sender).ActualHeight)));
+            //reset image
+            ImageZoomHelper.OnDoubleTap(sender, e);
         }
     }
 }
