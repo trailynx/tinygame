@@ -41,5 +41,15 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Settings"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Highscores"/>
+            <!-- <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Menüelement 1"/>
+                <shell:ApplicationBarMenuItem Text="Menüelement 2"/>
+            </shell:ApplicationBar.MenuItems> -->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
  
 </phone:PhoneApplicationPage>
