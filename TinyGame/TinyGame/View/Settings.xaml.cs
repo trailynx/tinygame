@@ -8,7 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace TinyGame
+namespace TinyGame.View
 {
     public partial class Settings : PhoneApplicationPage
     {
